@@ -49,7 +49,7 @@ figcaption{font-family:'IBM Plex Mono',monospace;font-size:14px;color:#555}
 .about .r{display:flex;flex-direction:column;gap:20px;padding-top:40px;font-size:19px}
 .about .cred{font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:1.7;color:#555}
 .video{position:relative;aspect-ratio:16/9;background:#111}
-.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video video,.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#111}
 
 .three{border-top:1px solid #111;border-bottom:1px solid #111}
 .three .wrap{padding-top:96px;padding-bottom:96px}

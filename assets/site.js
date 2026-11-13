@@ -33,9 +33,17 @@
       if (cfg.email_contato) { a.textContent = cfg.email_contato; a.href = 'mailto:' + cfg.email_contato; }
     });
     document.querySelectorAll('[data-video]').forEach(function (box) {
-      var id = cfg[box.getAttribute('data-video')];
-      if (!id) return;
-      box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?rel=0" title="Vídeo" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      var n = box.getAttribute('data-video');
+      var file = cfg['video_' + n + '_arquivo'], yt = cfg['video_' + n + '_youtube_id'], capa = cfg['video_' + n + '_capa'];
+      if (file) {
+        var v = document.createElement('video');
+        v.controls = true; v.playsInline = true; v.preload = 'metadata';
+        v.setAttribute('playsinline', ''); if (capa) v.poster = capa;
+        v.innerHTML = '<source src="' + file + '" type="video/mp4">Seu navegador não consegue mostrar este vídeo.';
+        box.appendChild(v);
+      } else if (yt) {
+        box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(yt) + '?rel=0" title="Vídeo" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      } else { return; }
       box.hidden = false;
       var wrap = box.closest('[data-video-wrap]'); if (wrap) wrap.hidden = false;
     });
