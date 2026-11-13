@@ -13,6 +13,6 @@
   "meta_pixel_id": "",
   "video_apresentacao_arquivo": "assets/video/apresentacao.mp4",
   "video_apresentacao_capa": "assets/video/apresentacao-capa.jpg",
-  "video_amostra_arquivo": "",
-  "video_amostra_capa": ""
+  "video_amostra_arquivo": "assets/video/amostra.mp4",
+  "video_amostra_capa": "assets/video/amostra-capa.jpg"
 }
