@@ -91,6 +91,12 @@ figcaption{font-family:'IBM Plex Mono',monospace;font-size:14px;color:#555}
 .offer .price{font-family:'Instrument Serif',serif;font-size:clamp(76px,12vw,112px);line-height:1;color:#111}
 .offer .pay{font-size:18px;color:#555}
 .offer .guar{font-size:16px;color:#555;margin-top:8px}
+.offer .launch{color:#111;background:#E8A33D;padding:6px 14px;border-radius:2px}
+.offer .was{font-size:20px;color:#555;margin-bottom:-10px}
+.offer .was s{text-decoration-thickness:2px}
+.offer .after{font-family:'IBM Plex Mono',monospace;font-size:14px;color:#555}
+.hero .herolaunch{margin-top:-12px;color:#111}
+.hero .herolaunch::before{content:'';display:inline-block;width:10px;height:10px;background:#E8A33D;margin-right:10px;vertical-align:1px}
 
 .faq .wrap{padding-top:112px;padding-bottom:112px}
 .faq .head{display:flex;flex-direction:column;gap:16px;margin-bottom:40px}

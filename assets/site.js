@@ -24,6 +24,12 @@
   }
 
   function fill(cfg) {
+    // Preço de lançamento: depois da data em "lancamento_ate", a página passa sozinha para o preço cheio.
+    if (cfg.lancamento_ate && new Date() > new Date(cfg.lancamento_ate + 'T23:59:59-03:00')) {
+      if (cfg.preco_cheio) cfg.preco = cfg.preco_cheio;
+      if (cfg.faq_preco_cheio) cfg.faq_preco = cfg.faq_preco_cheio;
+      document.querySelectorAll('[data-launch]').forEach(function (el) { el.hidden = true; });
+    }
     document.querySelectorAll('[data-fill]').forEach(function (el) {
       var v = cfg[el.getAttribute('data-fill')];
       if (v) el.textContent = v;
